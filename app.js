@@ -13,7 +13,7 @@ const todos = [
 	{ id: 3, item: 'Build a To Do App', complete: false }
 ]
 
-app.get('/', (request, response) => {
+app.get('/', (_, response) => {
 	response.sendFile('index.html', { root })
 })
 
