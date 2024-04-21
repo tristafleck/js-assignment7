@@ -9,11 +9,11 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 app.use(express.static('public'))
 
-//const todos = [
-//	{ id: 1, item: 'Learn JavaScript', complete: false },
-//	{ id: 2, item: 'Learn Express', complete: false },
-//	{ id: 3, item: 'Build a To Do App', complete: false }
-//]
+const todos = [
+{ id: 1, item: 'Learn JavaScript', complete: false },
+{ id: 2, item: 'Learn Express', complete: false },
+{ id: 3, item: 'Build a To Do App', complete: false }
+]
 
 app.get('/', async (_, response) => {
 	const collection = await getCollection('todos-api', 'todos')
